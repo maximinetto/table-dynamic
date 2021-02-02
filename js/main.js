@@ -8,9 +8,9 @@ main()
 function main() {
     let row;
     const buttonActionsSimple = ` 
-            <button class="btn-floating waves-effect waves-light blue"> <i class="material-icons">add</i> </button>
-            <button class="btn-floating waves-effect waves-light yellow"> <i class="material-icons">edit</i> </button>
-            <button class="btn-floating waves-effect waves-light red"> <i class="material-icons">delete</i> </button>`;
+            <button class="btn-floating waves-effect waves-light blue add"> <i class="material-icons">add</i> </button>
+            <button class="btn-floating waves-effect waves-light yellow edit"> <i class="material-icons">edit</i> </button>
+            <button class="btn-floating waves-effect waves-light red delete"> <i class="material-icons">delete</i> </button>`;
 
     loadData();
 
@@ -98,7 +98,7 @@ function main() {
     }
 
     function addEvent() {
-        const addButtons = table.querySelectorAll("button:first-child");
+        const addButtons = table.querySelectorAll("button.add");
         addButtons.forEach(b => {
             b.addEventListener("click", ev => addCommand())
         })
@@ -159,8 +159,8 @@ function main() {
 
     function actionButtonsEditMode() {
         return `<div class="tableCell row">
-        <button class="btn-floating waves-effect waves-light blue" type="submit"> <i class="material-icons">check</i> </button>
-        <button class="btn-floating waves-effect waves-light red"> <i class="material-icons">close</i> </button>
+        <button class="btn-floating waves-effect waves-light blue accept" type="submit"> <i class="material-icons">check</i> </button>
+        <button class="btn-floating waves-effect waves-light red close"> <i class="material-icons">close</i> </button>
     </div>`
     }
 
