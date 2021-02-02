@@ -1,0 +1,72 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#table {
+  display: table;
+  border-collapse: collapse;
+  font-size: 1.2em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid #009879;
+}
+
+#table .tableHeaderGroup{
+  display: table-header-group;
+}
+
+#table .tableRowGroup{
+  display: table-row-group;
+}
+
+#table .tableHeaderGroup .tableCell{
+  background-color: #009879;
+  color: #fff;
+  font-weight: 600;
+}
+
+#table .tableHeaderGroup .tableCell,
+#table .tableRowGroup .tableRow .tableCell {
+  display: table-cell;
+  padding: 1em 1.2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#table .tableRowGroup .tableRow {
+  display: table-row;
+  border-bottom: 1px solid #dddddd;
+}
+
+#table .tableRowGroup .tableRow:nth-of-type(even) {
+  background-color: #f3f3f3;
+  
+}
+
+#table .tableRowGroup .tableRow:last-of-type {
+ 
+}
+
+#table .tableRowGroup .tableRow .tableCell input {
+  margin: auto;
+  text-align: center;
+}
+
+#table .tableRowGroup .tableRow .tableCell span {
+  padding-left: 0;
+  margin-left: -20px;
+}
+
+#table .tableRowGroup .tableRow .tableCell label {
+  display: block;
+}
+
+#table .tableRowGroup .tableRow .tableCell .helper-text {
+  display: block;
+}
